@@ -1,0 +1,1320 @@
+Request body,Response body,Specs(sync),Specs(async)
+"{
+  ""task_id"": ""74f4c926-250c-43ca-9c53-453e87ceacd1"",
+  ""group_id"": ""8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e"",
+  ""data"": {
+    ""id_number"": ""0233010210646""
+  }
+}","{
+  ""action"": ""verify_with_source"",
+  ""completed_at"": ""2024-08-23T18:17:18+05:30"",
+  ""created_at"": ""2024-08-23T18:17:18+05:30"",
+  ""group_id"": ""8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e"",
+  ""request_id"": ""684d4c7e-e9b8-4d09-b59a-8b8680cd432e"",
+  ""result"": {
+    ""source_output"": {
+      ""active_status"": ""Aktif/Tidak aktif"",
+      ""company_name"": ""PERMATA ARA TEX"",
+      ""migration_status"": ""Belum Migrasi"",
+      ""status"": ""id_found""
+    }
+  },
+  ""status"": ""completed"",
+  ""task_id"": ""74f4c926-250c-43ca-9c53-453e87ceacd1"",
+  ""type"": ""idn_nib""
+}","openapi: 3.0.0
+info:
+  title: IDN NIB Verification (Sync)
+  description: Spec for verify_with_source_idn_nib API in sync mode
+  version: 1.0.0
+servers:
+  - url: https://eve.idfystaging.com
+  - url: https://api.idfystaging.com
+paths:
+  /v3/tasks/sync/verify_with_source/idn_nib:
+   post:
+      summary: IDN NIB Verification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task_id:
+                  type: string
+                  description: TaskID
+                group_id:
+                  type: string
+                  description: GroupID
+                data:
+                  type: object
+                  properties:
+                    id_number:
+                      type: string
+                      description: The NIB ID Number (required)
+                  required:
+                    - id_number
+              required:
+                - task_id
+                - group_id
+                - data
+            example:
+              task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+              group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+              data:
+                id_number: ""0233010210646""
+      responses:
+        200:
+          description: 'success'
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                action: verify_with_source
+                completed_at: '2021-08-05T18:37:49+05:30'
+                created_at: '2021-08-05T18:37:44+05:30'
+                group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+                request_id: a28d2e71-3ad8-483e-afa7-331d555c8ea6
+                result:
+                  valid: true
+                status: completed
+                task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+                type: idn_nib","openapi: 3.0.0
+info:
+  title: IDN NIB Verification (Asnc)
+  description: Spec for verify_with_source_idn_nib API in async mode
+  version: 1.0.0
+servers:
+  - url: https://eve.idfystaging.com
+  - url: https://api.idfystaging.com
+paths:
+  /v3/tasks/async/verify_with_source/idn_nib:
+   post:
+      summary: IDN NIB Verification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task_id:
+                  type: string
+                  description: TaskID
+                group_id:
+                  type: string
+                  description: GroupID
+                data:
+                  type: object
+                  properties:
+                    id_number:
+                      type: string
+                      description: The NIB ID Number (required)
+                  required:
+                    - id_number
+              required:
+                - task_id
+                - group_id
+                - data
+            example:
+              task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+              group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+              data:
+                id_number: ""0233010210646""
+      responses:
+        200:
+          description: 'success'
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                action: verify_with_source
+                completed_at: '2021-08-05T18:37:49+05:30'
+                created_at: '2021-08-05T18:37:44+05:30'
+                group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+                request_id: a28d2e71-3ad8-483e-afa7-331d555c8ea6
+                result:
+                  valid: true
+                status: completed
+                task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+                type: idn_nib"
+"{
+  ""task_id"": ""74f4c926-250c-43ca-9c53-453e87ceacd1"",
+  ""group_id"": ""8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e"",
+  ""data"": {
+    ""rc_number"": ""TS34T5685"",
+    ""chassis_number"": ""MA1ZU2TBKJ1A14044"",
+    ""additional_details"": true,
+    ""advanced_features"": {
+      ""additional_search"": true
+    }
+  }
+}","{
+  ""action"": ""verify_with_source"",
+  ""completed_at"": ""2024-08-23T18:17:18+05:30"",
+  ""created_at"": ""2024-08-23T18:17:18+05:30"",
+  ""group_id"": ""8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e"",
+  ""request_id"": ""684d4c7e-e9b8-4d09-b59a-8b8680cd432e"",
+  ""result"": {
+    ""extraction_output"": {
+      ""avg_gross_vehicle_weight"": ""3225.00"",
+      ""axle_configuration"": null,
+      ""chassis_number"": ""MA1ZU2TBKJ1A14044"",
+      ""color"": ""WHITE"",
+      ""emission_norms"": null,
+      ""engine_number"": ""TBJ1A24832"",
+      ""fitness_upto"": ""2025-02-23"",
+      ""fuel_type"": ""DIESEL"",
+      ""insurance_details"": null,
+      ""insurance_validity"": ""2024-02-10"",
+      ""maker_model"": ""MAHINDRA BOLERO PICK UP FB 1.5 T  PS BSIV"",
+      ""manufacturer"": ""MAHINDRA & MAHINDRA LTD,"",
+      ""mv_tax_upto"": ""2024-03-31"",
+      ""owner_name"": ""G ANIL"",
+      ""owner_number"": """",
+      ""permit_issue_date"": null,
+      ""permit_number"": """",
+      ""permit_type"": null,
+      ""permit_validity"": null,
+      ""puc_number_upto"": null,
+      ""registration_date"": ""2018-03-08"",
+      ""registration_number"": ""TS34T5685"",
+      ""rto_name"": null,
+      ""status"": ""id_found"",
+      ""unladen_weight"": ""1725.00"",
+      ""vehicle_class"": ""GCRT"",
+      ""vehicle_financier"": ""TVS CREDIT SERVICES LTD""
+    }
+  },
+  ""status"": ""completed"",
+  ""task_id"": ""74f4c926-250c-43ca-9c53-453e87ceacd1"",
+  ""type"": ""ind_rc_basic""
+}","openapi: 3.0.0
+info:
+  title: RC Basic Verification (Sync)
+  description: Spec for verify_with_source_ind_rc_basic API in sync mode
+  version: 1.0.0
+servers:
+  - url: https://eve.idfystaging.com
+  - url: https://api.idfystaging.com
+paths:
+  /v3/tasks/sync/verify_with_source/ind_rc_basic:
+   post:
+      summary: RC Basic Verification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task_id:
+                  type: string
+                  description: TaskID
+                group_id:
+                  type: string
+                  description: GroupID
+                data:
+                  type: object
+                  properties:
+                    rc_number:
+                      type: string
+                      description: The RC number (required)
+                    additional_details:
+                      type: boolean
+                      description: Additional details (optional)
+                    advanced_features:
+                      type: object
+                      properties:
+                        additional_search:
+                          type: boolean
+                          description: Additional search feature (optional)
+                      description: Advanced features (optional)
+                    chassis_number:
+                      type: string
+                      description: The chassis number (optional)
+                  required:
+                    - rc_number
+              required:
+                - task_id
+                - group_id
+                - data
+            example:
+              task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+              group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+              data:
+                rc_number: abc123456
+                additional_details: true
+                advanced_features:
+                  additional_search: true
+                chasis_number: abcdef
+      responses:
+        200:
+          description: 'success'
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                action: verify_with_source
+                completed_at: '2021-08-05T18:37:49+05:30'
+                created_at: '2021-08-05T18:37:44+05:30'
+                group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+                request_id: a28d2e71-3ad8-483e-afa7-331d555c8ea6
+                result:
+                  valid: true
+                status: completed
+                task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+                type: ind_rc_basic","openapi: 3.0.0
+info:
+  title: RC Basic Verification (async)
+  description: Spec for verify_with_source_ind_rc_basic API in async mode
+  version: 1.0.0
+servers:
+  - url: https://eve.idfystaging.com
+  - url: https://api.idfystaging.com
+paths:
+  /v3/tasks/async/verify_with_source/ind_rc_basic:
+   post:
+      summary: RC Basic Verification
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task_id:
+                  type: string
+                  description: TaskID
+                group_id:
+                  type: string
+                  description: GroupID
+                data:
+                  type: object
+                  properties:
+                    rc_number:
+                      type: string
+                      description: The RC number (required)
+                    additional_details:
+                      type: boolean
+                      description: Additional details (optional)
+                    advanced_features:
+                      type: object
+                      properties:
+                        additional_search:
+                          type: boolean
+                          description: Additional search feature (optional)
+                      description: Advanced features (optional)
+                    chassis_number:
+                      type: string
+                      description: The chassis number (optional)
+                  required:
+                    - rc_number
+              required:
+                - task_id
+                - group_id
+                - data
+            example:
+              task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+              group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+              data:
+                rc_number: abc123456
+                additional_details: true
+                advanced_features:
+                  additional_search: true
+                chasis_number: abcdef
+      responses:
+        200:
+          description: 'success'
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                action: verify_with_source
+                completed_at: '2021-08-05T18:37:49+05:30'
+                created_at: '2021-08-05T18:37:44+05:30'
+                group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+                request_id: a28d2e71-3ad8-483e-afa7-331d555c8ea6
+                result:
+                  valid: true
+                status: completed
+                task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+                type: ind_rc_basic"
+"{
+  ""task_id"": ""74f4c926-250c-43ca-9c53-453e87ceacd1"",
+  ""group_id"": ""8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e"",
+  ""data"": {
+    ""document1"": ""https://c8.alamy.com/comp/H3D3H0/small-indian-shop-sells-merchandise-per-single-unit-H3D3H0.jpg""
+  }
+}","{
+  ""action"": ""validate"",
+  ""completed_at"": ""2024-08-23T18:17:18+05:30"",
+  ""created_at"": ""2024-08-23T18:17:18+05:30"",
+  ""group_id"": ""8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e"",
+  ""request_id"": ""684d4c7e-e9b8-4d09-b59a-8b8680cd432e"",
+  ""result"": {
+    ""inventory_present"": true,
+    ""mcc_categories"": [
+      {
+        ""category"": ""Dairy Products Store"",
+        ""confidence_score"": 92,
+        ""mcc_code"": 5451,
+        ""reason"": ""Store specializes in dairy products, which is evident from the signage and inventory.""
+      },
+      {
+        ""category"": ""Miscellaneous Food Stores"",
+        ""confidence_score"": 75,
+        ""mcc_code"": 5499,
+        ""reason"": ""The shop sells miscellaneous food products which could also include a variety of other edible items apart from dairy.""
+      }
+    ],
+    ""shop_board_type"": ""Flex"",
+    ""store_movable"": false,
+    ""store_name"": ""Amul Prem Dairy"",
+    ""store_name_visible"": true,
+    ""store_name_translated"": ""Amul Prem Dairy"",
+    ""is_live"": true
+  },
+  ""status"": ""completed"",
+  ""task_id"": ""74f4c926-250c-43ca-9c53-453e87ceacd1"",
+  ""type"": ""shop_image""
+}","openapi: 3.0.0
+info:
+  title: Validate Shop Image (sync)
+  description: Spec for SHIV API in sync mode
+  version: 1.0.0
+servers:
+  - url: https://eve.idfystaging.com
+  - url: https://api.idfystaging.com
+paths:
+  /v3/tasks/sync/validate/shop_image:
+    post:
+      summary: Async Validate Shop Image
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task_id:
+                  type: string
+                  description: TaskID
+                group_id:
+                  type: string
+                  description: GroupID
+                data:
+                  type: object
+                  properties:
+                    document1:
+                      type: string
+                      description: Image Url (required)
+                  required:
+                    - document1
+              required:
+                - task_id
+                - group_id
+                - data
+            example:
+              task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+              group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+              data:
+                document1: https://c8.alamy.com/comp/H3D3H0/small-indian-shop-sells-merchandise-per-single-unit-H3D3H0.jpg
+      responses:
+        200:
+          description: 'success'
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                action: validate_shop_image
+                completed_at: '2021-08-05T18:37:49+05:30'
+                created_at: '2021-08-05T18:37:44+05:30'
+                group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+                request_id: a28d2e71-3ad8-483e-afa7-331d555c8ea6
+                result:
+                  is_shop: true
+                  is_blur: true
+                status: completed
+                task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+                type: shop_image","openapi: 3.0.0
+info:
+  title: Validate Shop Image (async)
+  description: Spec for SHIV API in async mode
+  version: 1.0.0
+servers:
+  - url: https://eve.idfystaging.com
+  - url: https://api.idfystaging.com
+paths:
+  /v3/tasks/async/validate/shop_image:
+    post:
+      summary: Async Validate Shop Image
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task_id:
+                  type: string
+                  description: TaskID
+                group_id:
+                  type: string
+                  description: GroupID
+                data:
+                  type: object
+                  properties:
+                    document1:
+                      type: string
+                      description: Image Url (required)
+                  required:
+                    - document1
+              required:
+                - task_id
+                - group_id
+                - data
+            example:
+              task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+              group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+              data:
+                document1: https://c8.alamy.com/comp/H3D3H0/small-indian-shop-sells-merchandise-per-single-unit-H3D3H0.jpg
+      responses:
+        200:
+          description: 'success'
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                action: validate_shop_image
+                completed_at: '2021-08-05T18:37:49+05:30'
+                created_at: '2021-08-05T18:37:44+05:30'
+                group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+                request_id: a28d2e71-3ad8-483e-afa7-331d555c8ea6
+                result:
+                  is_shop: true
+                  is_blur: true
+                status: completed
+                task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+                type: shop_image"
+"{
+    ""version"": ""v3"",
+    ""public_id"": ""8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e"",
+    ""data"": {
+        ""document_url"": ""IMG_20190821_131847.jpg"",
+        ""doc_type"": ""ind_pan"",
+        ""advanced_features"": {
+            ""face_details"": false,
+            ""detect_doc_side"": true
+        }
+    }
+}","{
+  ""action"": ""validate"",
+  ""completed_at"": ""2024-08-23T18:17:18+05:30"",
+  ""created_at"": ""2024-08-23T18:17:18+05:30"",
+  ""group_id"": ""8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e"",
+  ""request_id"": ""684d4c7e-e9b8-4d09-b59a-8b8680cd432e"",
+  ""result"": {
+    ""detected_doc_side"": ""back"",
+    ""detected_doc_type"": ""ind_passport"",
+    ""face_details"": {
+      ""detected"": false
+    },
+    ""is_readable"": true,
+    ""readability"": {
+      ""confidence"": 66
+    }
+  },
+  ""status"": ""completed"",
+  ""task_id"": ""74f4c926-250c-43ca-9c53-453e87ceacd1"",
+  ""type"": ""document""
+}","openapi: 3.0.0
+info:
+  title: Document Image Validation API (Sync)
+  description: This API is used to perform real-time validation checks on ID documents submitted by users.
+  version: 1.0.0
+servers:
+  - url: https://eve.idfystaging.com
+  - url: https://api.idfystaging.com
+paths:
+  /v3/tasks/sync/validate/document:
+    post:
+      summary: Document Image Validation Sync
+      description: 
+        This endpoint performs real-time validation checks on ID documents submitted by users. 
+        It provides immediate feedback if an incorrect or unexpected document is submitted and identifies the type of an unknown OVD.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - task_id
+                - group_id
+                - data
+              properties:
+                task_id:
+                  type: string
+                  description: Unique identifier for the task
+                  format: uuid
+                group_id:
+                  type: string
+                  description: Identifier for the group
+                  format: uuid
+                data:
+                  type: object
+                  required:
+                    - document1
+                  properties:
+                    document1:
+                      type: string
+                      description: Image in base64 format or URL of the document
+                      format: document
+                    doc_type:
+                      type: string
+                      description: Type of document for additional client-side validation
+                    advanced_features:
+                      type: object
+                      properties:
+                        detect_doc_side:
+                          type: boolean
+                          description: Detect if the document uploaded is the front, back, or both sides
+                          example: true
+                        face_details:  
+                          type: boolean
+                          description: Check face details
+                          example: true
+                        check_scan:  
+                          type: boolean
+                          description: Check scan
+                          example: true
+                        readability:  
+                          type: boolean
+                          description: Check readability
+                          example: true  
+      responses:
+        '200':
+          description: Successful validation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  action:
+                    type: string
+                    description: Action taken for the request
+                    example: validate
+                  completed_at:
+                    type: string
+                    description: Timestamp when the action was completed
+                    format: date-time
+                    example: 2024-08-30T12:34:56Z
+                  created_at:
+                    type: string
+                    description: Timestamp when the request was created
+                    format: date-time
+                    example: 2024-08-30T12:30:00Z
+                  group_id:
+                    type: string
+                    description: Identifier for the group
+                    format: uuid
+                  request_id:
+                    type: string
+                    description: Identifier for the request
+                    format: uuid
+                  result:
+                    type: object
+                    description: Container for the result
+                    properties:
+                      detected_doc_side:
+                        type: string
+                        description: Detected side of the uploaded document
+                        enum:
+                          - front
+                          - back
+                          - both
+                      detected_doc_type:
+                        type: string
+                        description: Type of document detected
+                        enum:
+                          - ind_pan
+                          - ind_aadhaar
+                          - ind_voter_id
+                          - ind_driving_license
+                          - ind_passport
+                          - not_detected
+                      is_readable:
+                        type: boolean
+                        description: Result of image readability
+                      readability:
+                        type: object
+                        description: Container for readability score
+                        properties:
+                          confidence:
+                            type: integer
+                            description: Confidence score for image readability
+                            minimum: 0
+                            maximum: 100
+                  status:
+                    type: string
+                    description: Status of the response
+                    example: success
+                  task_id:
+                    type: string
+                    description: The unique identifier of a requested task provided by you
+                    format: uuid
+                  type:
+                    type: string
+                    description: Type of request
+                    example: document
+        '400':
+          description: Bad request due to invalid parameters
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: Error status
+                    example: error
+                  message:
+                    type: string
+                    description: Error details
+                    example: Invalid UUID format for task_id.
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: Error status
+                    example: error
+                  message:
+                    type: string
+                    description: Error message
+                    example: An unexpected error occurred.","openapi: 3.0.0
+info:
+  title: Document Image Validation API (Async)
+  description: This API is used to perform real-time validation checks on ID documents submitted by users.
+  version: 1.0.0
+servers:
+  - url: https://eve.idfystaging.com
+  - url: https://api.idfystaging.com
+paths:
+  /v3/tasks/async/validate/document:
+    post:
+      summary: Document Image Validation Async
+      description: 
+        This endpoint performs real-time validation checks on ID documents submitted by users. 
+        It provides immediate feedback if an incorrect or unexpected document is submitted and identifies the type of an unknown OVD.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - task_id
+                - group_id
+                - data
+              properties:
+                task_id:
+                  type: string
+                  description: Unique identifier for the task
+                  format: uuid
+                group_id:
+                  type: string
+                  description: Identifier for the group
+                  format: uuid
+                data:
+                  type: object
+                  required:
+                    - document1
+                  properties:
+                    document1:
+                      type: string
+                      description: Image in base64 format or URL of the document
+                      format: document
+                    doc_type:
+                      type: string
+                      description: Type of document for additional client-side validation
+                    advanced_features:
+                      type: object
+                      properties:
+                        detect_doc_side:
+                          type: boolean
+                          description: Detect if the document uploaded is the front, back, or both sides
+                          example: true
+                        face_details:  
+                          type: boolean
+                          description: Check face details
+                          example: true
+                        check_scan:  
+                          type: boolean
+                          description: Check scan
+                          example: true
+                        readability:  
+                          type: boolean
+                          description: Check readability
+                          example: true  
+      responses:
+        '200':
+          description: Successful validation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  action:
+                    type: string
+                    description: Action taken for the request
+                    example: validate
+                  completed_at:
+                    type: string
+                    description: Timestamp when the action was completed
+                    format: date-time
+                    example: 2024-08-30T12:34:56Z
+                  created_at:
+                    type: string
+                    description: Timestamp when the request was created
+                    format: date-time
+                    example: 2024-08-30T12:30:00Z
+                  group_id:
+                    type: string
+                    description: Identifier for the group
+                    format: uuid
+                  request_id:
+                    type: string
+                    description: Identifier for the request
+                    format: uuid
+                  result:
+                    type: object
+                    description: Container for the result
+                    properties:
+                      detected_doc_side:
+                        type: string
+                        description: Detected side of the uploaded document
+                        enum:
+                          - front
+                          - back
+                          - both
+                      detected_doc_type:
+                        type: string
+                        description: Type of document detected
+                        enum:
+                          - ind_pan
+                          - ind_aadhaar
+                          - ind_voter_id
+                          - ind_driving_license
+                          - ind_passport
+                          - not_detected
+                      is_readable:
+                        type: boolean
+                        description: Result of image readability
+                      readability:
+                        type: object
+                        description: Container for readability score
+                        properties:
+                          confidence:
+                            type: integer
+                            description: Confidence score for image readability
+                            minimum: 0
+                            maximum: 100
+                  status:
+                    type: string
+                    description: Status of the response
+                    example: success
+                  task_id:
+                    type: string
+                    description: The unique identifier of a requested task provided by you
+                    format: uuid
+                  type:
+                    type: string
+                    description: Type of request
+                    example: document
+        '400':
+          description: Bad request due to invalid parameters
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: Error status
+                    example: error
+                  message:
+                    type: string
+                    description: Error details
+                    example: Invalid UUID format for task_id.
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: Error status
+                    example: error
+                  message:
+                    type: string
+                    description: Error message
+                    example: An unexpected error occurred."
+"{
+    ""task_id"": ""74f4c916-250c-43ca-9c53-453e87ceacd1"",
+    ""group_id"": ""8e16324a-58fc-4ba4-ab20-5bc8e7c3c41e"",
+    ""data"": {
+        ""document1"": ""https://i.postimg.cc/qMVYJ0L4/Screenshot-2022-01-19-at-11-44-32-AM.png"",
+        ""document2"": ""https://i.postimg.cc/4N60nMLt/Screenshot-2022-01-19-at-11-44-36-AM.png"",
+        ""consent"": ""yes""
+        ""advanced_details"":{             //optional field
+            ""extract_last_4_digit"": true,
+            ""split_name"": true // optional field
+        }
+    }
+}","{
+  ""action"": ""extract"",
+  ""completed_at"": ""2024-08-23T18:17:18+05:30"",
+  ""created_at"": ""2024-08-23T18:17:18+05:30"",
+  ""group_id"": ""8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e"",
+  ""request_id"": ""684d4c7e-e9b8-4d09-b59a-8b8680cd432e"",
+  ""result"": {
+    ""extraction_output"": {
+      ""address"": ""Uddin , Gram po - tarapur , Gaziour"",
+      ""date_of_birth"": ""2001-02-10"",
+      ""district"": null,
+      ""fathers_name"": ""Md Kojeeb Uddin"",
+      ""gender"": ""MALE"",
+      ""house_number"": null,
+      ""id_number"": ""275407981484"",
+      ""is_scanned"": ""false"",
+      ""name_on_card"": ""Akash S Nambiar"",
+      ""full_name_split"": [
+        ""Akash"",
+        ""S"",
+        ""Nambiar""
+      ],
+      ""pincode"": ""813321"",
+      ""state"": ""Bihar"",
+      ""street_address"": ""tarapur , Gaziour"",
+      ""year_of_birth"": ""2001""
+    },
+    ""qr_output"": {
+      ""address"": null,
+      ""date_of_birth"": null,
+      ""district"": null,
+      ""gender"": null,
+      ""house_number"": null,
+      ""id_number"": null,
+      ""name_on_card"": null,
+      ""pincode"": null,
+      ""state"": null,
+      ""street_address"": null,
+      ""year_of_birth"": null
+    }
+  },
+  ""status"": ""completed"",
+  ""task_id"": ""74f4c926-250c-43ca-9c53-453e87ceacd1"",
+  ""type"": ""ind_aadhaar""
+}","openapi: 3.0.0
+info:
+  title: Aadhaar OCR (Sync)
+  description: Spec for extract_ind_aadhaar API in sync mode
+  version: 1.0.0
+servers:
+  - url: https://eve.idfystaging.com
+  - url: https://api.idfystaging.com
+paths:
+  /v3/tasks/sync/extract/ind_aadhaar:
+    post:
+      summary: Aadhaar OCR
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task_id:
+                  type: string
+                  description: TaskID
+                group_id:
+                  type: string
+                  description: GroupID
+                data:
+                  type: object
+                  properties:
+                    document1:
+                      type: string
+                      format: document
+                      description: Document URL (required)
+                      minLength: 1
+                    document2:
+                      type: string
+                      format: document
+                      description: Document URL
+                      nullable: true
+                    consent:
+                      type: string
+                      enum: ['yes', 'YES']
+                      description: 'yes/no'
+                    advanced_details:
+                      type: object
+                      properties:
+                        extract_last_4_digit:
+                          type: boolean
+                  required:
+                    - document1
+                    - consent
+              required:
+                - task_id
+                - group_id
+                - data
+            example:
+              task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+              group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+              data:
+                document1: ""https://image.com""
+                consent: ""yes""
+                advanced_details: 
+                  extract_last_4_digit: true
+      responses:
+        200:
+          description: 'success'
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                action: extract
+                completed_at: '2021-08-05T18:37:49+05:30'
+                created_at: '2021-08-05T18:37:44+05:30'
+                group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+                request_id: a28d2e71-3ad8-483e-afa7-331d555c8ea6
+                result:
+                  valid: true
+                status: completed
+                task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+                type: ind_aadhaar","openapi: 3.0.0
+info:
+  title: Aadhaar OCR (Async)
+  description: Spec for extract_ind_aadhaar API in async mode
+  version: 1.0.0
+servers:
+  - url: https://eve.idfystaging.com
+  - url: https://api.idfystaging.com
+paths:
+  /v3/tasks/async/extract/ind_aadhaar:
+    post:
+      summary: Aadhaar OCR
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task_id:
+                  type: string
+                  description: TaskID
+                group_id:
+                  type: string
+                  description: GroupID
+                data:
+                  type: object
+                  properties:
+                    document1:
+                      type: string
+                      format: document
+                      description: Document URL (required)
+                      minLength: 1
+                    document2:
+                      type: string
+                      format: document
+                      description: Document URL
+                      nullable: true
+                    consent:
+                      type: string
+                      enum: ['yes', 'YES']
+                      description: 'yes/no'
+                    advanced_details:
+                      type: object
+                      properties:
+                        extract_last_4_digit:
+                          type: boolean
+                  required:
+                    - document1
+                    - consent
+              required:
+                - task_id
+                - group_id
+                - data
+            example:
+              task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+              group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+              data:
+                document1: ""https://image.com""
+                consent: ""yes""
+                advanced_details: 
+                  extract_last_4_digit: true
+      responses:
+        200:
+          description: 'success'
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                action: extract
+                completed_at: '2021-08-05T18:37:49+05:30'
+                created_at: '2021-08-05T18:37:44+05:30'
+                group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+                request_id: a28d2e71-3ad8-483e-afa7-331d555c8ea6
+                result:
+                  valid: true
+                status: completed
+                task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+                type: ind_aadhaar"
+"{
+  ""task_id"": ""74f4c926-250c-43ca-9c53-453e87ceacd1"",
+  ""group_id"": ""8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e"",
+  ""data"": {
+    ""document1"": ""https://c8.alamy.com/comp/H3D3H0/small-indian-shop-sells-merchandise-per-single-unit-H3D3H0.jpg""
+  }
+}","{
+  ""action"": ""check_photo_liveness"",
+  ""completed_at"": ""2024-08-23T18:17:18+05:30"",
+  ""created_at"": ""2024-08-23T18:17:18+05:30"",
+  ""group_id"": ""8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e"",
+  ""request_id"": ""684d4c7e-e9b8-4d09-b59a-8b8680cd432e"",
+  """"result"""": {
+    """"are_eyes_open"""": false,
+    """"confidence"""": 98,
+    """"face_box"""": {
+      """"height"""": 544,
+      """"left"""": 232,
+      """"top"""": 296,
+      """"width"""": 480
+    },
+    """"face_coverage"""": {
+      """"message"""": """"optimal"""",
+      """"percentage"""": 19,
+      """"status"""": """"optimal""""
+    },
+    """"face_detected"""": true,
+    """"face_mask_detected"""": false,
+    """"face_quality"""": {
+      """"message"""": """"optimal"""",
+      """"status"""": """"optimal""""
+    },
+    """"is_face_cropped"""": false,
+    """"is_front_facing"""": false,
+    """"is_live"""": true,
+    """"is_nsfw"""": false,
+    """"multiple_faces_detected"""": false,
+    """"review_required"""": false,
+    """"sunglass_detected"""": false
+  }
+  ""status"": ""completed"",
+  ""task_id"": ""74f4c926-250c-43ca-9c53-453e87ceacd1"",
+  ""type"": ""deepfake""
+}","openapi: 3.0.0
+info:
+  title: Face DeepFake Detection (sync)
+  description: Spec for deepfake detection API in sync mode
+  version: 1.0.0
+servers:
+  - url: https://eve.idfystaging.com
+  - url: https://api.idfystaging.com
+paths:
+  /v3/tasks/sync/check_photo_liveness/deepfake:
+    post:
+      summary: Image Based Deepfake Detection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task_id:
+                  type: string
+                  description: TaskID
+                group_id:
+                  type: string
+                  description: GroupID
+                data:
+                  type: object
+                  properties:
+                    document1:
+                      type: string
+                      description: Image Url (required)
+                  required:
+                    - document1
+              required:
+                - task_id
+                - group_id
+                - data
+            example:
+              task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+              group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+              data:
+                document1: https://img.freepik.com/free-photo/woman-shirt-making-selfie-studio_171337-17192.jpg
+      responses:
+        200:
+          description: 'success'
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                action: check_photo_liveness
+                completed_at: '2021-08-05T18:37:49+05:30'
+                created_at: '2021-08-05T18:37:44+05:30'
+                group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+                request_id: a28d2e71-3ad8-483e-afa7-331d555c8ea6
+                result:
+                  is_deepfaked: true
+                  confidence: 99
+                  face_box:
+                    height: 1230
+                    left: 1089
+                    top: 1503
+                    width: 924
+                  face_detected: true
+                  multiple_faces_detected: false
+                status: completed
+                task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+                type: face","openapi: 3.0.0
+info:
+  title: Face DeepFake Detection (async)
+  description: Spec for deepfake detection API in async mode
+  version: 1.0.0
+servers:
+  - url: https://eve.idfystaging.com
+  - url: https://api.idfystaging.com
+paths:
+  /v3/tasks/async/check_photo_liveness/deepfake:
+    post:
+      summary: Image Based Deepfake Detection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                task_id:
+                  type: string
+                  description: TaskID
+                group_id:
+                  type: string
+                  description: GroupID
+                data:
+                  type: object
+                  properties:
+                    document1:
+                      type: string
+                      description: Image Url (required)
+                  required:
+                    - document1
+              required:
+                - task_id
+                - group_id
+                - data
+            example:
+              task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+              group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+              data:
+                document1: https://img.freepik.com/free-photo/woman-shirt-making-selfie-studio_171337-17192.jpg
+      responses:
+        200:
+          description: 'success'
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                action: check_photo_liveness
+                completed_at: '2021-08-05T18:37:49+05:30'
+                created_at: '2021-08-05T18:37:44+05:30'
+                group_id: 8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e
+                request_id: a28d2e71-3ad8-483e-afa7-331d555c8ea6
+                result:
+                  is_deepfaked: true
+                  confidence: 99
+                  face_box:
+                    height: 1230
+                    left: 1089
+                    top: 1503
+                    width: 924
+                  face_detected: true
+                  multiple_faces_detected: false
+                status: completed
+                task_id: 74f4c926-250c-43ca-9c53-453e87ceacd1
+                type: face
+"

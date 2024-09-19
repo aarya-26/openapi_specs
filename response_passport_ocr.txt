@@ -1,0 +1,28 @@
+{
+  "action": "extract",
+  "completed_at": "2021-08-05T15:08:09+05:30",
+  "created_at": "2021-08-05T15:08:05+05:30",
+  "group_id": "8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e",
+  "request_id": "3694df9a-00f6-4b96-88ae-59ffd385bd02",
+  "result": {
+    "extraction_output": {
+      "date_of_birth": "YYYY-MM-DD",
+      "date_of_expiry": "2021-06-26",
+      "date_of_issue": "YYYY-MM-DD",
+      "gender": "FEMALE",
+      "given_name": "JOHN",
+      "id_number": "A123456B",
+      "middle_name": "CARL",
+      "nationality": "FILIPINO",
+      "place_of_birth": "A MANILA",
+      "place_of_issue": "DFA MANILA",
+      "surname": "DOE",
+      "mrz_line1":"",
+      "mrz_line2":"",
+      "country_code":""
+    }
+  },
+  "status": "completed",
+  "task_id": "74f4c926-250c-43ca-9c53-453e87ceacd1",
+  "type": "phl_passport"
+}

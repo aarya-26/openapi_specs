@@ -1,0 +1,42 @@
+/* styles.css */
+
+/* Set the overall theme colors */
+body {
+    background-color: #ffffff;
+    color: #ff0000;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar styling */
+.css-1d391kg, .css-hxt7ib {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+/* Button styling in the sidebar */
+.stButton > button {
+    background-color: #ff0000 !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Styling for Streamlit headers and subheaders */
+/* .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, .stMarkdown h4, .stMarkdown h5 {
+    color: #ff0000;
+} */
+
+/* Error messages styling */
+.stAlert {
+    border-color: #ff0000;
+}
+
+/* Code block styling */
+.stCodeBlock {
+    background-color: #fff5f5;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    color: #ff0000;
+}

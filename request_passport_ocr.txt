@@ -1,0 +1,8 @@
+{
+    "task_id": "74f4c926-250c-43ca-9c53-453e87ceacd1",
+    "group_id": "8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e",
+    "data": {
+        "document1": "<passport image link>", //required
+        "document2": "<passport image link>" //optional
+    }
+}

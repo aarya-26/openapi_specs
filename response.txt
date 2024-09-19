@@ -1,0 +1,28 @@
+{
+  "action": "verify_with_source",
+  "completed_at": "2021-05-31T14:14:25+05:30",
+  "created_at": "2021-05-31T14:14:22+05:30",
+  "group_id": "8e16424a-58fc-4ba4-ab20-5bc8e7c3c41e",
+  "request_id": "4b1c114f-ffbe-4e7f-8461-76c9e797f0dc",
+  "result": {
+    "source_output": {
+      "status": "id_found",
+      "company_details": {
+        "company_name": "SURYODOY ENTERPRISE",
+        "premise_address": "EXTENTION BUILDING, MANGUSHREE COMPLEX, POST-KHANJANCHAK",
+        "pincode": "410210",
+        "state": "Maharashtra",
+        "license_no": "22819015001312",
+        "license_type": "Registration",
+        "validity": "Inactive"
+      },
+      "products": [
+        "02-Fats and oils, and fat emulsions",
+        "13 - Foodstuffs intended for particular nutritional uses"
+      ]
+    }
+  },
+  "status": "completed",
+  "task_id": "74f4c926-250c-43ca-9c53-453e87ceacd1",
+  "type": "ind_fssai"
+}
